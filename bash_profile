@@ -1,18 +1,18 @@
 source /Users/dehuazhu/root/bin/thisroot.sh
 
 #my homenetwork
-alias sshstarseeker="ssh -YC dehuazhu@dehuazhutealeave.synology.me"
+alias sshstarseeker="ssh -Y dehuazhu@dehuazhutealeave.synology.me"
 alias sshfsstarseeker="sshfs -o allow_other,defer_permissions,reconnect dehuazhu@dehuazhutealeave.synology.me:/home/dehuazhu /Users/dehuazhu/starseeker"
 alias sshtealeave="ssh -p 23 dehuazhu@dehuazhutealeave.synology.me"
-alias sshddgo="ssh -YC dd-go@dehuazhutealeave.synology.me"
+alias sshddgo="ssh -Y dd-go@dehuazhutealeave.synology.me"
 alias sshfstealeave="sshfs -o allow_other,defer_permissions,reconnect -p 23  dehuazhu@dehuazhutealeave.synology.me:~/ /Users/dehuazhu/tealeave"
 alias sshfsStorageElement1="sshfs -o allow_other,defer_permissions,reconnect dehuazhu@dehuazhutealeave.synology.me:/mnt/StorageElement1 /Users/dehuazhu/StorageElement1"
 
 
 alias kextunload="sudo kextunload -b com.apple.filesystems.smbfs"
-alias sshlion="ssh -YC -p 9922 zhud@lion.ethz.ch"
-alias sshlxplus="ssh -YC dezhu@lxplus.cern.ch" 
-alias ssht3="ssh -YC dezhu@t3ui02.psi.ch"
+alias sshlion="ssh -Y -p 9922 zhud@lion.ethz.ch"
+alias sshlxplus="ssh -Y dezhu@lxplus.cern.ch" 
+alias ssht3="ssh -Y dezhu@t3ui02.psi.ch"
 #alias sshgcloud="gcloud compute ssh davlins-secret" # IP: 35.198.149.85 
 alias sshgcloud="ssh -i /Users/dehuazhu/.ssh/google_compute_engine dehuazhu@35.246.186.177" # IP: 35.198.149.85 
 #alias sshfsgcloud="sudo sshfs -o IdentityFile=/Users/dehuazhu/.ssh/google_compute_engine,allow_other,defer_permissions dehuazhu@35.246.186.177:/home/dehuazhu /Users/dehuazhu/gcloud"
@@ -64,6 +64,6 @@ if [ -f '/Users/dehuazhu/google-cloud-sdk/completion.bash.inc' ]; then . '/Users
 
 
 #cern school of computing, instructions here: https://indico.cern.ch/event/769356/page/15184-laptop-configuration
-alias sshcsc_vm="ssh -YC -p 27222 csc_de@localhost"
+alias sshcsc_vm="ssh -Y -p 27222 csc_de@localhost"
 alias sshcsc="ssh csc_de@csc-cc-vm-25.cern.ch"
 alias sshfscsc="sudo sshfs -p 27222 -o allow_other,defer_permissions,reconnect csc_de@localhost:/home/csc_de /Users/dehuazhu/csc/"
