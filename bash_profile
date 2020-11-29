@@ -67,3 +67,29 @@ if [ -f '/Users/dehuazhu/google-cloud-sdk/completion.bash.inc' ]; then . '/Users
 alias sshcsc_vm="ssh -YC -p 27222 csc_de@localhost"
 alias sshcsc="ssh csc_de@csc-cc-vm-25.cern.ch"
 alias sshfscsc="sudo sshfs -p 27222 -o allow_other,defer_permissions,reconnect csc_de@localhost:/home/csc_de /Users/dehuazhu/csc/"
+
+
+alias texmain="cdthesis && tex-pdf main && cd -"
+function tex-pdf {
+    printf "Step 1/5 - pdflatex\n"
+    #pdflatex -halt-on-error -interaction=nonstopmode $1.tex > $1.txt
+    pdflatex -halt-on-error main.tex | grep '^!.*' -A200 --color=always
+
+    printf "Step 2/5 - bibtex\n"
+    bibtex $1.aux > $1.txt | grep '^!.*' -A200 --color=always
+
+    printf "Step 3/5 - makeindex\n"
+    makeindex main.nlo -q -s nomencl.ist -o main.nls | grep '^!.*' -A200 --color=always
+
+    printf "Step 4/5 - pdflatex\n"
+    #pdflatex -halt-on-error -interaction=nonstopmode $1.tex > $1.txt
+    pdflatex -halt-on-error main.tex | grep '^!.*' -A200 --color=always
+
+    printf "Step 5/5 - pdflatex\n"
+    #pdflatex -halt-on-error -interaction=nonstopmode $1.tex > $1.txt
+    pdflatex -halt-on-error main.tex | grep '^!.*' -A200 --color=always
+
+    rm -f $1.ilg $1.txt $1.aux $1.bbl $1.blg $1.log $1.out $1.toc $1.brf $1.lof $1.lot $1.nlo $1.nls  texput.log
+}
+export -f tex-pdf
+
