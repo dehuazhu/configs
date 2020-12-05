@@ -16,7 +16,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'yggdroot/indentline'
 Plugin 'bling/vim-airline'
+Plugin 'nvie/vim-flake8'
 
+Plugin 'pangloss/vim-javascript'    " JavaScript support
+Plugin 'leafgarland/typescript-vim' " TypeScript syntax
+Plugin 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plugin 'jparise/vim-graphql'        " GraphQL syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
