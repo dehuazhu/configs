@@ -13,10 +13,16 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-"Plugin 'yggdroot/indentline'
+Plugin 'yggdroot/indentline'
 Plugin 'bling/vim-airline'
 Plugin 'nvie/vim-flake8'
+Plugin 'christoomey/vim-tmux-navigator'
+
+" Version Control
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
 
 " Web development stack
 Plugin 'pangloss/vim-javascript'    " JavaScript support
@@ -24,6 +30,8 @@ Plugin 'leafgarland/typescript-vim' " TypeScript syntax
 Plugin 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plugin 'jparise/vim-graphql'        " GraphQL syntax
 Plugin 'mattn/emmet-vim'            " html syntax 
+Plugin 'hail2u/vim-css3-syntax'     " CSS syntax
+
 
 
 " All of your Plugins must be added before the following line
